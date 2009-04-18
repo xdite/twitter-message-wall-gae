@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_tw" lang="zh_tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="xdite & evenwu">
+	<title>Mr.IE6</title>
+	<link rel="stylesheet" type="text/css" href="http://evendesign.tw/ie6/reset.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="http://evendesign.tw/ie6/style.css" media="screen" />
+</head>
+<!--[if lt IE 7 ]><body class="ie6 ie"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 ie"><![endif]-->
+<!--[if !IE]>--><body><!--<![endif]-->
+
+<div class="content">
+	<h1>Goodbye <br /> Mr. Internet Explorer 6</h1>
+	
+	<ul id="twitter">
+	<% @tweets.each do |t| %>
+		<li>
+			<span class="text"><%= t.text %></span>
+			<span class="none">by</span>
+			<span class="by"><a href="http://twitter.com/<%= t.from_user%>"><%= t.from_user%></a> <a href="http://twitter.com/<%= t.from_user%>/status/<%= t.id %>" class="permalink">#</a></span>
+		</li>
+	<% end %>
+	</ul>
+
+
+	<ul class="footer">
+		<li>Design by <a href="http://evendesign.tw/">EvenDesign</a></li>
+		<li>Coding by <a href="http://blog.xdite.net/">XDite</a></li>
+		<li>hosting by <a href="http://appengine.google.com/">	<img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif"
+      alt="Powered by Google App Engine" /></a></li>
+	</ul>
+
+</div>
+
+</body>
+</html>
