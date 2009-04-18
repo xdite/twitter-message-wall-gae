@@ -19,7 +19,7 @@ Warbler::Config.new do |config|
   # in lib (and not otherwise excluded) then they need not be mentioned here.
   # JRuby and JRuby-Rack are pre-loaded in this list. Be sure to include your
   # own versions if you directly set the value
-  # config.java_libs += FileList["lib/java/*.jar"]
+  config.java_libs += FileList["lib/java/*.jar"]
  
   # Loose Java classes and miscellaneous files to be placed in WEB-INF/classes.
   # config.java_classes = FileList["target/classes/**.*"]
@@ -35,7 +35,7 @@ Warbler::Config.new do |config|
   # The Rails gems are included by default unless the vendor/rails directory is present.
   # config.gems += ["activerecord-jdbcmysql-adapter", "jruby-openssl"]
   # config.gems << "tzinfo"
-  config.gems = ['sinatra', 'json_pure']
+  config.gems = ['sinatra', 'json_pure' ]
  
   # Uncomment this if you don't want to package rails gem.
   # config.gems -= ["rails"]
@@ -43,6 +43,7 @@ Warbler::Config.new do |config|
   # The most recent versions of gems are used.
   # You can specify versions of gems by using a hash assignment:
   # config.gems["rails"] = "2.0.2"
+  
  
   # You can also use regexps or Gem::Dependency objects for flexibility or
   # fine-grained control.

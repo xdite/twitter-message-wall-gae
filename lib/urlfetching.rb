@@ -1,5 +1,4 @@
 require 'java'
-
 module URLFetch
   module UFS #Url Fetch Service
     import com.google.appengine.api.urlfetch.URLFetchServiceFactory

@@ -19,12 +19,10 @@
 		<li>
 			<span class="text"><%= t.text %></span>
 			<span class="none">by</span>
-			<span class="by"><a href="http://twitter.com/<%= t.from_user%>"><%= t.from_user%></a> <a href="http://twitter.com/<%= t.from_user%>/status/<%= t.id %>" class="permalink">#</a></span>
+			<span class="by"><a href="http://twitter.com/<%= t.from_user%>"><%= t.from_user%></a> <a href="http://twitter.com/<%= t.from_user%>/status/<%= t.tweet_id %>" class="permalink">#</a></span>
 		</li>
 	<% end %>
 	</ul>
-
-
 	<ul class="footer">
 		<li>Design by <a href="http://evendesign.tw/">EvenDesign</a></li>
 		<li>Coding by <a href="http://blog.xdite.net/">XDite</a></li>
