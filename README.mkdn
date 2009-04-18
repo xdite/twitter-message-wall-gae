@@ -1,4 +1,4 @@
-Tweet Message Wall
+Tweet Message Wall on Google App Engine
 ========
 
 Demo Site
