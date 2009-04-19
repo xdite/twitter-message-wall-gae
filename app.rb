@@ -3,6 +3,10 @@ require 'rubygems'
 require 'sinatra'
 require 'twitter_search'
 require 'bumble'
+require 'activesupport'
+require 'will_paginate/array'
+require 'will_paginate/view_helpers'
+require 'lib/view_helpers'
 get '/' do
   @client = TwitterSearch::Client.new 'politweets'
   @results = @client.query :q => '@MrIE6'
@@ -14,7 +18,7 @@ get '/' do
       end
    end
   
-  @tweets = Tweet.all
+  @tweets = Tweet.all.paginate(:page => params[:page], :per_page => 10)
   
   erb :home
 end 
@@ -23,3 +27,6 @@ class Tweet
   include Bumble
   ds :tweet_id, :text, :from_user, :to_user , :from_user , :to_user_id , :from_user_id , :created_at , :profile_image_url , :iso_language_code
 end
+
+include TweetMessage::ViewHelpers
+include WillPaginate::ViewHelpers
